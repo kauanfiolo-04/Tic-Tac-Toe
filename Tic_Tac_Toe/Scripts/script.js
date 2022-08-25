@@ -173,7 +173,7 @@ const minMax=(testBoard, player)=>{
     if(player===computer){
 
         bestScore=-1000;
-        for(let i=0;i<move.length;i++){
+        for(let i=0;i<moves.length;i++){
             if(moves[i].score>bestScore){
                 bestScore= moves[i].score;
                 bestMove=i;
@@ -182,8 +182,8 @@ const minMax=(testBoard, player)=>{
     }else{
 
         bestScore=1000;
-        for(let i=0;i<move.length;i++){
-            if(moves[i].score>bestScore){
+        for(let i=0;i<moves.length;i++){
+            if(moves[i].score<bestScore){
                 bestScore= moves[i].score;
                 bestMove=i;
             }
